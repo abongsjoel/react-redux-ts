@@ -6,7 +6,7 @@
 
 To start, we initialize "create-react-app" with TypeScript and then remove the code created by "create-react-app" that we dont need"
 
-Then we install and configure fake-server with dummy data and use concurrently to run both "create-react-app server and the "fake-server" together for development.
+Then we install and configure fake-server with dummy data and use concurrently to run both "create-react-app server and the "fake-server" together for development, and use curl cli to query the fake-server.
 
 
 <!-- 
