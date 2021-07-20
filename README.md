@@ -8,7 +8,7 @@ To start, I initialize "create-react-app" with TypeScript and then remove the co
 
 Then I install and configure fake-server with dummy data and use concurrently to run both "create-react-app server" and the "fake-server" together for development, and use curl cli to query the fake-server.
 
-Next i install Redux and create the reducer. Then I initialize the store and create the root state type and wrap the App's component tree into the react-redux's Provider component.
+Next i install "redux" and "react-redux", and create the reducer. Then I initialize the store and create the root state type and wrap the App's component tree into the react-redux's Provider component.
 
 
 <!-- 
