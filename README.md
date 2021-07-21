@@ -16,7 +16,7 @@ Next, I create a Recorder component:
   - Setup an interval for a counter (setInterval + useRef + useEffect + clearInterval)
   - Dispatch the recorder's "stop" action
 
-Next, I add the redux-thunk middleware, create an asynchronous action to fetch events and a reducer for the "fetch events" action.
+Next, I add the redux-thunk middleware, create an asynchronous action to fetch events and a reducer for the "fetch events" action. Then I used the "connect" function to pass the events array and the "loadUserEvents" dispatch function to the Calendar component. Then, I grouped the user events by day and render the Calendar.
 
 
 <!-- 

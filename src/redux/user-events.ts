@@ -1,17 +1,24 @@
-import { Action, AnyAction } from 'redux';
+import { Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from './store';
 
-interface UserEvents {
+export interface UserEvent {
   id: number;
   title: string;
   dateStart: string;
   dateEnd: string;
 }
 
+const selectUserEventState = (rootState: RootState) => rootState.userEvents;
+
+export const selectUserEventsArray = (rootState: RootState) => {
+  const state = selectUserEventState(rootState);
+  return state.allIds.map((id) => state.byIds[id]);
+};
+
 interface UserEventsState {
-  byIds: Record<UserEvents['id'], UserEvents>;
-  allIds: UserEvents['id'][];
+  byIds: Record<UserEvent['id'], UserEvent>;
+  allIds: UserEvent['id'][];
 }
 
 const LOAD_REQUEST = 'userEvents/load_request';
@@ -22,7 +29,7 @@ const LOAD_SUCCESS = 'userEvents/load_success';
 
 interface LoadSuccessAction extends Action<typeof LOAD_SUCCESS> {
   payload: {
-    events: UserEvents[];
+    events: UserEvent[];
   };
 }
 
@@ -46,7 +53,7 @@ export const loadUserEvents =
 
     try {
       const response = await fetch('http://localhost:3001/events');
-      const events: UserEvents[] = await response.json();
+      const events: UserEvent[] = await response.json();
 
       dispatch({
         type: LOAD_SUCCESS,
