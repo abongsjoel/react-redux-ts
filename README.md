@@ -28,6 +28,12 @@ Then Deleting Events:
   - Add the reducer function for the action
   - Dispatch the action when the user presses the delete button
 
+Lastly, Editing Event titles:
+  - Render input field when the user clicks on the title
+  - Add the thunk action to update the title
+  - Add the reducer for the action
+  - Dispatch the action
+
 
 <!-- 
 ## Live Demo 
