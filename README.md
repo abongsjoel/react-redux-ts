@@ -16,6 +16,8 @@ Next, I create a Recorder component:
   - Setup an interval for a counter (setInterval + useRef + useEffect + clearInterval)
   - Dispatch the recorder's "stop" action
 
+Next, I add the redux-thunk middleware, create an asynchronous action to fetch events and a reducer for the "fetch events" action.
+
 
 <!-- 
 ## Live Demo 
