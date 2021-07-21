@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Recorder.css';
+
 const Recorder = () => {
   return (
     <div className="recorder">
