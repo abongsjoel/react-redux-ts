@@ -6,6 +6,8 @@ import { selectDateStart, start } from '../../redux/recorder';
 
 import './Recorder.css';
 
+const addZero = (num: number) => (num < 10 ? `0${num}` : `${num}`);
+
 const Recorder = () => {
   const dispatch = useDispatch();
   const dateStart = useSelector(selectDateStart);
@@ -43,7 +45,7 @@ const Recorder = () => {
         <span></span>
       </button>
       <div className="recorder-counter">
-        {hours}:{minutes}:{seconds}
+        {addZero(hours)}:{addZero(minutes)}:{addZero(seconds)}
       </div>
     </div>
   );
