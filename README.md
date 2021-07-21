@@ -8,7 +8,13 @@ To start, I initialize "create-react-app" with TypeScript and then remove the co
 
 Then I install and configure fake-server with dummy data and use concurrently to run both "create-react-app server" and the "fake-server" together for development, and use curl cli to query the fake-server.
 
-Next i install "redux" and "react-redux", and create the reducer. Then I initialize the store and create the root state type and wrap the App's component tree into the react-redux's Provider component.
+Next, I install "redux" and "react-redux", and create the reducer. Then I initialize the store and create the root state type and wrap the App's component tree into the react-redux's Provider component.
+
+Next, I create a Recorder component:
+  - Create the Redux actions and the reducer for the recorder feature
+  - Dispatch the recorder's "start" action (useDispatch + useSelector hooks)
+  - Setup an interval for a counter (setInterval + useRef + useEffect + clearInterval)
+  - Dispatch the recorder's "stop" action
 
 
 <!-- 
