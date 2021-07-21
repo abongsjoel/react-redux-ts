@@ -20,8 +20,13 @@ Next, I add the redux-thunk middleware, create an asynchronous action to fetch e
 
 Next, I moved on to creating Events:
   - Add the thunk action to add an event
-  - Code the reducer function for the action
+  - Add the reducer function for the action
   - Dispatch the action when the user clicks the stop button
+
+Then Deleting Events:
+  - Add thunk action to delete an event
+  - Add the reducer function for the action
+  - Dispatch the action when the user presses the delete button
 
 
 <!-- 
