@@ -18,6 +18,22 @@ Next, I create a Recorder component:
 
 Next, I add the redux-thunk middleware, create an asynchronous action to fetch events and a reducer for the "fetch events" action. Then I used the "connect" function to pass the events array and the "loadUserEvents" dispatch function to the Calendar component. Then, I grouped the user events by day and render the Calendar.
 
+Next, I moved on to creating Events:
+  - Add the thunk action to add an event
+  - Add the reducer function for the action
+  - Dispatch the action when the user clicks the stop button
+
+Then Deleting Events:
+  - Add thunk action to delete an event
+  - Add the reducer function for the action
+  - Dispatch the action when the user presses the delete button
+
+Lastly, Editing Event titles:
+  - Render input field when the user clicks on the title
+  - Add the thunk action to update the title
+  - Add the reducer for the action
+  - Dispatch the action
+
 
 <!-- 
 ## Live Demo 
