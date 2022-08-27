@@ -2,7 +2,7 @@
 
 > A simple application built while extending my knowledge on Typescript with React and Redux.
 
-<!-- ![screenshot](../dev/screenshot.png) -->
+![screenshot](../dev/screenshot.png)
 
 To start, I initialize "create-react-app" with TypeScript and then remove the code created by "create-react-app" that I dont need"
 
@@ -11,40 +11,43 @@ Then I install and configure fake-server with dummy data and use concurrently to
 Next, I install "redux" and "react-redux", and create the reducer. Then I initialize the store and create the root state type and wrap the App's component tree into the react-redux's Provider component.
 
 Next, I create a Recorder component:
-  - Create the Redux actions and the reducer for the recorder feature
-  - Dispatch the recorder's "start" action (useDispatch + useSelector hooks)
-  - Setup an interval for a counter (setInterval + useRef + useEffect + clearInterval)
-  - Dispatch the recorder's "stop" action
+
+- Create the Redux actions and the reducer for the recorder feature
+- Dispatch the recorder's "start" action (useDispatch + useSelector hooks)
+- Setup an interval for a counter (setInterval + useRef + useEffect + clearInterval)
+- Dispatch the recorder's "stop" action
 
 Next, I add the redux-thunk middleware, create an asynchronous action to fetch events and a reducer for the "fetch events" action. Then I used the "connect" function to pass the events array and the "loadUserEvents" dispatch function to the Calendar component. Then, I grouped the user events by day and render the Calendar.
 
 Next, I moved on to creating Events:
-  - Add the thunk action to add an event
-  - Add the reducer function for the action
-  - Dispatch the action when the user clicks the stop button
+
+- Add the thunk action to add an event
+- Add the reducer function for the action
+- Dispatch the action when the user clicks the stop button
 
 Then Deleting Events:
-  - Add thunk action to delete an event
-  - Add the reducer function for the action
-  - Dispatch the action when the user presses the delete button
+
+- Add thunk action to delete an event
+- Add the reducer function for the action
+- Dispatch the action when the user presses the delete button
 
 Lastly, Editing Event titles:
-  - Render input field when the user clicks on the title
-  - Add the thunk action to update the title
-  - Add the reducer for the action
-  - Dispatch the action
 
+- Render input field when the user clicks on the title
+- Add the thunk action to update the title
+- Add the reducer for the action
+- Dispatch the action
 
-<!-- 
-## Live Demo 
+<!--
+## Live Demo
 
 - [Visit Page]() -->
 
 ## Built With
+
 - Typescript
 - React
 - Redux
-
 
 ## Author
 
@@ -53,7 +56,6 @@ Lastly, Editing Event titles:
 - GitHub: [@abongsjoel](https://github.com/abongsjoel)
 - Twitter: [@thierryjoel10](https://twitter.com/ThierryJoel10)
 - LinkedIn: [Chi Abongwa Joel](https://www.linkedin.com/in/chi-abongwa-joel-b4285a97/)
-
 
 ## Acknowledgments
 
@@ -72,10 +74,6 @@ Give a ⭐️ if you like this project!
 ## License
 
   <p>This project is <a href="../main/LICENSE">MIT</a> licensed.</p>
-
-
-
-  
 
 # Getting Started with Create React App
 
