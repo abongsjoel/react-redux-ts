@@ -2,7 +2,7 @@
 
 > A simple application built while extending my knowledge on Typescript with React and Redux.
 
-![screenshot](../dev/screenshot.png)
+<!-- ![screenshot](../dev/screenshot.png) -->
 
 To start, I initialize "create-react-app" with TypeScript and then remove the code created by "create-react-app" that I dont need"
 
