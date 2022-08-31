@@ -80,14 +80,15 @@ const Calendar: React.FC<Props> = ({ events, loadUserEvents }) => {
         const groupDate = new Date(dayKey);
         const day = groupDate.getDate();
         const month = groupDate.toLocaleDateString(undefined, {
-          month: 'long',
+          month: 'short',
         });
+        const year = groupDate.getFullYear();
 
         return (
           <div key={dayKey} className="calendar-day">
             <div className="calendar-day-label">
               <span>
-                {day} {month}
+                {day} {month} {year}
               </span>
             </div>
             <div className="calendar-events">

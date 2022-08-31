@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addZero } from '../../lib/utils';
 
 import {
   deleteUserEvent,
@@ -25,6 +26,16 @@ const EventItem: React.FC<Props> = ({ event }) => {
   };
 
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const getTime = (date: Date) => {
+    const hour = date.getHours();
+    const min = date.getMinutes();
+
+    return `${addZero(hour)}:${addZero(min)}`;
+  };
+
+  const startTime = getTime(new Date(event.dateStart));
+  const endTime = getTime(new Date(event.dateEnd));
 
   useEffect(() => {
     if (editable) {
@@ -53,7 +64,9 @@ const EventItem: React.FC<Props> = ({ event }) => {
   return (
     <div key={event.id} className="calendar-event">
       <div className="calendar-event-info">
-        <div className="calendar-event-time">10:00 - 12:00</div>
+        <div className="calendar-event-time">
+          {startTime} - {endTime}
+        </div>
         <div className="calendar-event-title">
           {editable ? (
             <input
